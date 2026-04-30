@@ -9,9 +9,8 @@ from rich import box
 
 
 class FacialFind(HackingTool):
-    TITLE = "Find SocialMedia By Facial Recognation System"
-    DESCRIPTION = "A Social Media Mapping Tool that correlates profiles\n " \
-                  "via facial recognition across different sites."
+    TITLE = "通过人脸识别系统查找社交媒体"
+    DESCRIPTION = "一种社交媒体映射工具，通过人脸识别在不同平台之间关联个人资料。"
     INSTALL_COMMANDS = [
         "sudo apt install -y software-properties-common",
         "sudo add-apt-repository ppa:mozillateam/firefox-next && sudo apt update && sudo apt upgrade",
@@ -19,11 +18,11 @@ class FacialFind(HackingTool):
         "sudo apt install -y build-essential cmake libgtk-3-dev libboost-all-dev",
         "cd social_mapper/setup",
         "sudo python3 -m pip install --no-cache-dir -r requirements.txt",
-        'echo "[!]Now You have To do some Manually\n'
-        '[!] Install the Geckodriver for your operating system\n'
-        '[!] Copy & Paste Link And Download File As System Configuration\n'
+        '[!]现在你需要手动完成一些设置\n'
+        '[!]为你的操作系统安装 Geckodriver\n'
+        '[!]复制并粘贴以下链接下载文件作为系统配置\n'
         '[#] https://github.com/mozilla/geckodriver/releases\n'
-        '[!!] On Linux you can place it in /usr/bin "| boxes | lolcat'
+        '[!!]在 Linux 上你可以将其放在 /usr/bin'
     ]
     PROJECT_URL = "https://github.com/Greenwolf/social_mapper"
 
@@ -33,14 +32,14 @@ class FacialFind(HackingTool):
         setup_dir = get_tools_dir() / "social_mapper" / "setup"
         subprocess.run(["python3", "social_mapper.py", "-h"], cwd=str(setup_dir))
         console.print(
-            "[bold magenta]Set username and password in social_mapper.py before running.[/]\n"
-            "[magenta]Usage: python social_mapper.py -f <folder> -i <path> -m fast <AcName> -fb -tw[/]"
+            "[bold magenta]运行前请在 social_mapper.py 中设置用户名和密码。[/]\n"
+            "[magenta]用法: python social_mapper.py -f <文件夹> -i <路径> -m fast <账户名称> -fb -tw[/]"
         )
 
 
 class FindUser(HackingTool):
-    TITLE = "Find SocialMedia By UserName"
-    DESCRIPTION = "Find usernames across over 75 social networks"
+    TITLE = "通过用户名查找社交媒体"
+    DESCRIPTION = "在超过 75 个社交网络中查找用户名"
     INSTALL_COMMANDS = [
         "git clone https://github.com/xHak9x/finduser.git",
         "cd finduser && sudo chmod +x finduser.sh"
@@ -51,8 +50,8 @@ class FindUser(HackingTool):
 
 class Sherlock(HackingTool):
     TITLE = "Sherlock"
-    DESCRIPTION = "Hunt down social media accounts by username across social networks \n " \
-                  "For More Usage \n" \
+    DESCRIPTION = "通过用户名在社交网络中追踪社交媒体账户\n" \
+                  "更多用法:\n" \
                   "\t >>python3 sherlock --help"
     INSTALL_COMMANDS = [
         "git clone https://github.com/sherlock-project/sherlock.git",
@@ -63,8 +62,8 @@ class Sherlock(HackingTool):
     def run(self):
         from config import get_tools_dir
         from rich.prompt import Prompt
-        name = Prompt.ask("Enter Username")
-        # Bug 3 fix: os.chdir() replaced with cwd= parameter
+        name = Prompt.ask("输入用户名")
+        # Bug 3 修复: os.chdir() 替换为 cwd= 参数
         subprocess.run(
             ["python3", "sherlock", name],
             cwd=str(get_tools_dir() / "sherlock"),
@@ -72,20 +71,19 @@ class Sherlock(HackingTool):
 
 
 class SocialScan(HackingTool):
-    TITLE = "SocialScan | Username or Email"
-    DESCRIPTION = "Check email address and username availability on online " \
-                  "platforms with 100% accuracy"
+    TITLE = "SocialScan | 用户名或邮箱"
+    DESCRIPTION = "以 100% 准确率检查在线平台上邮箱地址和用户名的可用性"
     INSTALL_COMMANDS = ["pip install --user socialscan"]
     PROJECT_URL = "https://github.com/iojw/socialscan"
 
     def run(self):
         name = input(
-            "Enter Username or Emailid (if both then please space between email & username) >> ")
+            "输入用户名或邮箱 (如果两者都有请用空格分隔) >> ")
         subprocess.run(["sudo", "socialscan", f"{name}"])
 
 
 class SocialMediaFinderTools(HackingToolsCollection):
-    TITLE = "SocialMedia Finder"
+    TITLE = "社交媒体查找器"
     TOOLS = [
         FacialFind(),
         FindUser(),

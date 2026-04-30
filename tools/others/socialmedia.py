@@ -10,12 +10,12 @@ from rich import box
 
 
 class InstaBrute(HackingTool):
-    TITLE = "Instagram Attack"
-    DESCRIPTION = "Brute force attack against Instagram"
+    TITLE = "Instagram 攻击"
+    DESCRIPTION = "针对 Instagram 的暴力破解攻击"
     PROJECT_URL = "https://github.com/chinoogawa/instaBrute"
     # Py3-7: Python 2 only (pip2.7); also violates Instagram ToS
     ARCHIVED = True
-    ARCHIVED_REASON = "Python 2 only — EOL January 2020. Repo unmaintained since 2017."
+    ARCHIVED_REASON = "仅支持 Python 2 - 已于 2020 年 1 月停止维护。仓库自 2017 年以来未更新。"
     INSTALL_COMMANDS = []
     RUN_COMMANDS = []
 
@@ -24,8 +24,8 @@ class InstaBrute(HackingTool):
 
 
 class BruteForce(HackingTool):
-    TITLE = "AllinOne SocialMedia Attack"
-    DESCRIPTION = "Brute_Force_Attack Gmail Hotmail Twitter Facebook Netflix \n" \
+    TITLE = "社交媒体综合攻击"
+    DESCRIPTION = "暴力破解攻击 Gmail、Hotmail、Twitter、Facebook、Netflix\n" \
                   "[!] python3 Brute_Force.py -g <Account@gmail.com> -l <File_list>"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Matrix07ksa/Brute_Force.git",
@@ -36,8 +36,8 @@ class BruteForce(HackingTool):
 
 
 class Faceshell(HackingTool):
-    TITLE = "Facebook Attack"
-    DESCRIPTION = "Facebook BruteForcer"
+    TITLE = "Facebook 攻击"
+    DESCRIPTION = "Facebook 暴力破解工具"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Matrix07ksa/Brute_Force.git",
         "cd Brute_Force;sudo pip3 install proxylist;pip3 install mechanize"
@@ -46,9 +46,9 @@ class Faceshell(HackingTool):
 
     def run(self):
         from config import get_tools_dir
-        name = Prompt.ask("Enter Username")
-        wordlist = Prompt.ask("Enter Wordlist path")
-        # Bug 3 fix: os.chdir() replaced with cwd= parameter
+        name = Prompt.ask("输入用户名")
+        wordlist = Prompt.ask("输入字典文件路径")
+        # Bug 3 修复: os.chdir() 替换为 cwd= 参数
         subprocess.run(
             ["python3", "Brute_Force.py", "-f", name, "-l", wordlist],
             cwd=str(get_tools_dir() / "Brute_Force"),
@@ -56,8 +56,8 @@ class Faceshell(HackingTool):
 
 
 class AppCheck(HackingTool):
-    TITLE = "Application Checker"
-    DESCRIPTION = "Tool to check if an app is installed on the target device through a link."
+    TITLE = "应用程序检查器"
+    DESCRIPTION = "通过链接检查目标设备上是否安装了某个应用程序的工具。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/jakuta-tech/underhanded.git",
         "cd underhanded && sudo chmod +x underhanded.sh"
@@ -67,7 +67,7 @@ class AppCheck(HackingTool):
 
 
 class SocialMediaBruteforceTools(HackingToolsCollection):
-    TITLE = "SocialMedia Bruteforce"
+    TITLE = "社交媒体暴力破解"
     TOOLS = [
         InstaBrute(),
         BruteForce(),

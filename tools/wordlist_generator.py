@@ -11,8 +11,8 @@ from core import HackingTool, HackingToolsCollection, console
 
 class Cupp(HackingTool):
     TITLE = "Cupp"
-    # Bug 24 fix: DESCRIPTION was copy-pasted from WlCreator — completely wrong
-    DESCRIPTION = "Common User Passwords Profiler — generates personalized wordlists based on target info."
+    # Bug 24 修复: DESCRIPTION 是从 WlCreator 复制粘贴的 - 完全错误
+    DESCRIPTION = "常见用户密码分析器 - 根据目标信息生成定制密码字典。"
     INSTALL_COMMANDS = ["git clone https://github.com/Mebus/cupp.git"]
     RUN_COMMANDS = ["cd cupp && python3 cupp.py -i"]
     PROJECT_URL = "https://github.com/Mebus/cupp"
@@ -30,9 +30,8 @@ class Cupp(HackingTool):
 
 class WlCreator(HackingTool):
     TITLE = "WordlistCreator"
-    DESCRIPTION = "WlCreator is a C program that can create all possibilities" \
-                  " of passwords,\n and you can choose Length, Lowercase, " \
-                  "Capital, Numbers and Special Chars"
+    DESCRIPTION = "WlCreator 是一个 C 程序，可以创建所有可能的密码组合，\n" \
+                  "您可以选择长度、小写字母、大写字母、数字和特殊字符"
     INSTALL_COMMANDS = ["git clone https://github.com/Z4nzu/wlcreator.git"]
     RUN_COMMANDS = [
         "cd wlcreator && sudo gcc -o wlcreator wlcreator.c && ./wlcreator 5"]
@@ -51,7 +50,7 @@ class WlCreator(HackingTool):
 
 class GoblinWordGenerator(HackingTool):
     TITLE = "Goblin WordGenerator"
-    DESCRIPTION = "Goblin WordGenerator"
+    DESCRIPTION = "Goblin 密码字典生成器"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/GoblinWordGenerator.git"]
     RUN_COMMANDS = ["cd GoblinWordGenerator && python3 goblin.py"]
@@ -69,12 +68,11 @@ class GoblinWordGenerator(HackingTool):
 
 
 class showme(HackingTool):
-    TITLE = "Password list (1.4 Billion Clear Text Password)"
-    DESCRIPTION = "This tool allows you to perform OSINT and reconnaissance on " \
-                  "an organisation or an individual. It allows one to search " \
-                  "1.4 Billion clear text credentials which was dumped as " \
-                  "part of BreachCompilation leak. This database makes " \
-                  "finding passwords faster and easier than ever before."
+    TITLE = "密码列表 (14 亿明文密码)"
+    DESCRIPTION = "此工具允许您对组织或个人进行 OSINT 和侦察。\n" \
+                  "它允许搜索 14 亿明文凭证，这些凭证是\n" \
+                  "BreachCompilation 泄露的一部分。此数据库使\n" \
+                  "查找密码比以往更快更容易。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got.git",
         "cd SMWYG-Show-Me-What-You-Got && pip3 install -r requirements.txt"
@@ -94,10 +92,10 @@ class showme(HackingTool):
 
 
 class Hashcat(HackingTool):
-    TITLE = "Hashcat (Password Cracker)"
+    TITLE = "Hashcat (密码破解器)"
     DESCRIPTION = (
-        "World's fastest GPU/CPU password recovery tool — supports 300+ hash types.\n"
-        "Usage: hashcat -m 0 -a 0 hashes.txt wordlist.txt"
+        "世界上最快的 GPU/CPU 密码恢复工具 - 支持 300+ 种哈希类型。\n"
+        "用法: hashcat -m 0 -a 0 hashes.txt wordlist.txt"
     )
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["sudo apt-get install -y hashcat"]
@@ -108,8 +106,8 @@ class Hashcat(HackingTool):
 class JohnTheRipper(HackingTool):
     TITLE = "John the Ripper"
     DESCRIPTION = (
-        "Open-source password security auditing and recovery tool.\n"
-        "Usage: john --wordlist=wordlist.txt hashfile"
+        "开源密码安全审计和恢复工具。\n"
+        "用法: john --wordlist=wordlist.txt hashfile"
     )
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["sudo apt-get install -y john"]
@@ -118,10 +116,10 @@ class JohnTheRipper(HackingTool):
 
 
 class Haiti(HackingTool):
-    TITLE = "haiti (Hash Type Identifier)"
+    TITLE = "haiti (哈希类型识别器)"
     DESCRIPTION = (
-        "Identify hash types — supports 300+ algorithms.\n"
-        "Usage: haiti <hash>"
+        "识别哈希类型 - 支持 300+ 种算法。\n"
+        "用法: haiti <hash>"
     )
     REQUIRES_RUBY = True
     INSTALL_COMMANDS = ["gem install haiti-hash"]
@@ -130,7 +128,7 @@ class Haiti(HackingTool):
 
 
 class WordlistGeneratorTools(HackingToolsCollection):
-    TITLE = "Wordlist Generator"
+    TITLE = "密码字典生成器"
     TOOLS = [
         Cupp(),
         WlCreator(),

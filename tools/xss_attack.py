@@ -7,8 +7,8 @@ from core import HackingTool, HackingToolsCollection, console
 
 
 class Dalfox(HackingTool):
-    TITLE = "DalFox (Finder of XSS)"
-    DESCRIPTION = "XSS Scanning and Parameter Analysis tool."
+    TITLE = "Dalfox (XSS 查找器)"
+    DESCRIPTION = "XSS 扫描和参数分析工具。"
     INSTALL_COMMANDS = [
         "sudo apt-get install -y golang",
         "go install github.com/hahwul/dalfox/v2@latest",
@@ -20,8 +20,8 @@ class Dalfox(HackingTool):
 
 
 class XSSPayloadGenerator(HackingTool):
-    TITLE = "XSS Payload Generator"
-    DESCRIPTION = "XSS PAYLOAD GENERATOR - XSS SCANNER - XSS DORK FINDER"
+    TITLE = "XSS Payload 生成器"
+    DESCRIPTION = "XSS PAYLOAD 生成器 - XSS 扫描器 - XSS DORK 查找器"
     INSTALL_COMMANDS = [
         "git clone https://github.com/capture0x/XSS-LOADER.git",
         "cd XSS-LOADER;sudo pip3 install -r requirements.txt"
@@ -31,35 +31,35 @@ class XSSPayloadGenerator(HackingTool):
 
 
 class XSSFinder(HackingTool):
-    TITLE = "Extended XSS Searcher and Finder"
-    DESCRIPTION = "Extended XSS Searcher and Finder"
+    TITLE = "扩展 XSS 搜索器和查找器"
+    DESCRIPTION = "扩展 XSS 搜索器和查找器"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Damian89/extended-xss-search.git"]
     PROJECT_URL = "https://github.com/Damian89/extended-xss-search"
 
     def after_install(self):
         console.print(Panel.fit(
-            "[bold cyan]Follow These Steps After Installation:[/bold cyan]\n"
-            "[red]*[/red] Go to [yellow]extended-xss-search[/yellow] directory\n"
-            "[green]*[/green] Rename [bold]example.app-settings.conf[/bold] → [bold]app-settings.conf[/bold]",
-            title="[ Install Notes ]",
+            "[bold cyan]安装后请按照以下步骤操作:[/bold cyan]\n"
+            "[red]*[/red] 进入 [yellow]extended-xss-search[/yellow] 目录\n"
+            "[green]*[/green] 重命名 [bold]example.app-settings.conf[/bold] → [bold]app-settings.conf[/bold]",
+            title="[ 安装说明 ]",
             border_style="magenta"
         ))
-        input("Press ENTER to continue")
+        input("按回车键继续")
 
     def run(self):
         console.print(Panel.fit(
-            "[bold cyan]You need to add links to scan[/bold cyan]\n"
-            "[red]*[/red] Go to [yellow]extended-xss-search/config/urls-to-test.txt[/yellow]\n"
-            "[green]*[/green] Run: [bold]python3 extended-xss-search.py[/bold]",
-            title="[ Run Instructions ]",
+            "[bold cyan]您需要添加要扫描的链接[/bold cyan]\n"
+            "[red]*[/red] 进入 [yellow]extended-xss-search/config/urls-to-test.txt[/yellow]\n"
+            "[green]*[/green] 运行: [bold]python3 extended-xss-search.py[/bold]",
+            title="[ 运行说明 ]",
             border_style="blue"
         ))
 
 
 class XSSFreak(HackingTool):
     TITLE = "XSS-Freak"
-    DESCRIPTION = "An XSS scanner fully written in Python 3 from scratch."
+    DESCRIPTION = "一个完全用 Python 3 从头开始编写的 XSS 扫描器。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/PR0PH3CY33/XSS-Freak.git",
         "cd XSS-Freak;sudo pip3 install -r requirements.txt"
@@ -70,7 +70,7 @@ class XSSFreak(HackingTool):
 
 class XSpear(HackingTool):
     TITLE = "XSpear"
-    DESCRIPTION = "XSpear is an XSS Scanner built on Ruby Gems."
+    DESCRIPTION = "XSpear 是一个基于 Ruby Gems 构建的 XSS 扫描器。"
     INSTALL_COMMANDS = ["gem install XSpear"]
     RUN_COMMANDS = ["XSpear -h"]
     PROJECT_URL = "https://github.com/hahwul/XSpear"
@@ -86,11 +86,11 @@ class XSSCon(HackingTool):
 
     def run(self):
         console.print(Panel.fit(
-            "Enter target website to scan with XSSCon:",
+            "请输入要扫描的网站:",
             title="[bold yellow]XSSCon[/bold yellow]",
             border_style="bright_yellow"
         ))
-        website = Prompt.ask("[bold cyan]Enter Website[/bold cyan]")
+        website = Prompt.ask("[bold cyan]输入网站[/bold cyan]")
         from config import get_tools_dir
         subprocess.run(["python3", "xsscon.py", "-u", website],
                        cwd=str(get_tools_dir() / "XSSCon"))
@@ -98,7 +98,7 @@ class XSSCon(HackingTool):
 
 class XanXSS(HackingTool):
     TITLE = "XanXSS"
-    DESCRIPTION = "Reflected XSS searching tool that creates payloads from templates."
+    DESCRIPTION = "反射型 XSS 搜索工具，从模板创建 payload。"
     INSTALL_COMMANDS = ["git clone https://github.com/Ekultek/XanXSS.git"]
     PROJECT_URL = "https://github.com/Ekultek/XanXSS"
 
@@ -109,8 +109,8 @@ class XanXSS(HackingTool):
 
 
 class XSSStrike(HackingTool):
-    TITLE = "Advanced XSS Detection Suite"
-    DESCRIPTION = "XSStrike is a Python-based tool designed to detect and exploit XSS vulnerabilities."
+    TITLE = "高级 XSS 检测套件"
+    DESCRIPTION = "XSStrike 是一个基于 Python 的工具，用于检测和利用 XSS 漏洞。"
     INSTALL_COMMANDS = [
         "sudo rm -rf XSStrike",
         "git clone https://github.com/UltimateHackers/XSStrike.git "
@@ -125,7 +125,7 @@ class XSSStrike(HackingTool):
 class RVuln(HackingTool):
     TITLE = "RVuln"
     SUPPORTED_OS = ["linux"]
-    DESCRIPTION = "Multi-threaded and Automated Web Vulnerability Scanner written in Rust."
+    DESCRIPTION = "用 Rust 编写的多线程自动化 Web 漏洞扫描器。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/iinc0gnit0/RVuln.git;"
         "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;"
@@ -138,7 +138,7 @@ class RVuln(HackingTool):
 
 
 class XSSAttackTools(HackingToolsCollection):
-    TITLE = "XSS Attack Tools"
+    TITLE = "XSS 攻击工具"
     TOOLS = [
         Dalfox(),
         XSSPayloadGenerator(),
@@ -153,7 +153,7 @@ class XSSAttackTools(HackingToolsCollection):
 
     def show_info(self):
         console.print(Panel.fit(
-            "[bold magenta]XSS Attack Tools Collection[/bold magenta]\n"
-            "A curated set of tools for XSS vulnerability analysis and exploitation.",
+            "[bold magenta]XSS 攻击工具集合[/bold magenta]\n"
+            "一组用于 XSS 漏洞分析和利用的精选工具。",
             border_style="bright_magenta"
         ))

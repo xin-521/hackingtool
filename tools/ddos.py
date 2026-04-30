@@ -9,8 +9,8 @@ class DDoSTool(HackingTool):
     TITLE = "DDoS"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
-        "Best DDoS Attack Script With 36 Plus Methods. "
-        "DDoS attacks for SECURITY TESTING PURPOSES ONLY!"
+        "最佳 DDoS 攻击脚本，包含 36 种以上方法。"
+        "DDoS 攻击仅用于安全测试目的！"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/the-deepnet/ddos.git",
@@ -20,13 +20,13 @@ class DDoSTool(HackingTool):
 
     def run(self):
         from config import get_tools_dir
-        method     = Prompt.ask("Enter Method")
-        url        = Prompt.ask("Enter URL")
-        threads    = Prompt.ask("Enter Threads")
-        proxylist  = Prompt.ask("Enter ProxyList")
-        multiple   = Prompt.ask("Enter Multiple")
-        timer      = Prompt.ask("Enter Timer")
-        # Bug 4 fix: removed os.system("cd ddos;") — use cwd= instead
+        method     = Prompt.ask("输入方法")
+        url        = Prompt.ask("输入 URL")
+        threads    = Prompt.ask("输入线程数")
+        proxylist  = Prompt.ask("输入代理列表")
+        multiple   = Prompt.ask("输入倍数")
+        timer      = Prompt.ask("输入计时器")
+        # Bug 4 修复: 删除 os.system("cd ddos;") - 改用 cwd=
         subprocess.run(
             ["sudo", "python3", "ddos.py", method, url,
              "socks_type5.4.1", threads, proxylist, multiple, timer],
@@ -38,22 +38,22 @@ class SlowLoris(HackingTool):
     TITLE = "SlowLoris"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
-        "Slowloris is basically an HTTP Denial of Service attack. "
-        "It sends lots of HTTP requests."
+        "SlowLoris 本质上是一种 HTTP 拒绝服务攻击。"
+        "它发送大量 HTTP 请求。"
     )
     INSTALL_COMMANDS = ["sudo pip3 install slowloris"]
 
     def run(self):
-        target_site = Prompt.ask("Enter Target Site")
+        target_site = Prompt.ask("输入目标网站")
         subprocess.run(["slowloris", target_site])
 
 
 class Asyncrone(HackingTool):
-    TITLE = "Asyncrone | Multifunction SYN Flood DDoS Weapon"
+    TITLE = "Asyncrone | 多功能 SYN 洪水 DDoS 武器"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
-        "aSYNcrone is a C language based, multifunction SYN Flood DDoS Weapon.\n"
-        "Disable the destination system by sending SYN packets intensively."
+        "aSYNcrone 是一个基于 C 语言的多功能 SYN 洪水 DDoS 武器。\n"
+        "通过密集发送 SYN 数据包使目标系统瘫痪。"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/fatih4842/aSYNcrone.git",
@@ -63,11 +63,11 @@ class Asyncrone(HackingTool):
 
     def run(self):
         from config import get_tools_dir
-        source_port = Prompt.ask("Enter Source Port")
-        target_ip   = Prompt.ask("Enter Target IP")
-        target_port = Prompt.ask("Enter Target Port")
-        # Bug 5 fix: 1000 was int — subprocess requires all args str
-        # Bug 4 fix: removed os.system("cd aSYNcrone;") — use cwd= instead
+        source_port = Prompt.ask("输入源端口")
+        target_ip   = Prompt.ask("输入目标 IP")
+        target_port = Prompt.ask("输入目标端口")
+        # Bug 5 修复: 1000 是 int - subprocess 要求所有参数为 str
+        # Bug 4 修复: 删除 os.system("cd aSYNcrone;") - 改用 cwd=
         subprocess.run(
             ["sudo", "./aSYNcrone", str(source_port), str(target_ip), str(target_port), "1000"],
             cwd=str(get_tools_dir() / "aSYNcrone"),
@@ -78,8 +78,8 @@ class UFONet(HackingTool):
     TITLE = "UFOnet"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
-        "UFONet is a free software, P2P and cryptographic disruptive toolkit "
-        "that allows performing DoS and DDoS attacks."
+        "UFONet 是一个免费的 P2P 和加密破坏性工具包，"
+        "允许执行 DoS 和 DDoS 攻击。"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/epsylon/ufonet.git",
@@ -93,9 +93,9 @@ class GoldenEye(HackingTool):
     TITLE = "GoldenEye"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
-        "GoldenEye is a python3 app for SECURITY TESTING PURPOSES ONLY!\n"
-        "GoldenEye is a HTTP DoS Test Tool.\n"
-        "Usage: ./goldeneye.py <url> [OPTIONS]"
+        "GoldenEye 是一个 Python3 应用，仅用于安全测试目的！\n"
+        "GoldenEye 是一个 HTTP DoS 测试工具。\n"
+        "用法: ./goldeneye.py <url> [选项]"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/jseidl/GoldenEye.git",
@@ -105,8 +105,8 @@ class GoldenEye(HackingTool):
 
     def run(self):
         from config import get_tools_dir
-        # Bug 4 fix: removed os.system("cd GoldenEye; ...") — no-op cd subshell
-        url = Prompt.ask("Enter target URL")
+        # Bug 4 修复: 删除 os.system("cd GoldenEye; ...") - 无效的 cd 子 shell
+        url = Prompt.ask("输入目标 URL")
         subprocess.run(["sudo", "./goldeneye.py", url],
                        cwd=str(get_tools_dir() / "GoldenEye"))
 
@@ -114,9 +114,9 @@ class GoldenEye(HackingTool):
 class Saphyra(HackingTool):
     TITLE = "SaphyraDDoS"
     SUPPORTED_OS = ["linux"]
-    DESCRIPTION = "A Python DDoS script for SECURITY TESTING PURPOSES ONLY."
+    DESCRIPTION = "一个 Python DDoS 脚本，仅用于安全测试目的。"
     INSTALL_COMMANDS = [
-        # Bug 7 fix: removed "sudo su" (first step was dropping into interactive root shell)
+        # Bug 7 修复: 删除 "sudo su" (第一步是进入交互式 root shell)
         "git clone https://github.com/anonymous24x7/Saphyra-DDoS.git",
         "chmod +x Saphyra-DDoS/saphyra.py",
     ]
@@ -124,9 +124,9 @@ class Saphyra(HackingTool):
 
     def run(self):
         from config import get_tools_dir
-        url = Prompt.ask("Enter URL")
-        # Vuln 1 fix: was os.system("python saphyra.py " + url) — command injection
-        # Now uses subprocess list form — url is never interpolated into a shell string
+        url = Prompt.ask("输入 URL")
+        # 漏洞 1 修复: 原来是 os.system("python saphyra.py " + url) - 命令注入
+        # 现在使用 subprocess 列表形式 - url 不会被插入到 shell 字符串中
         subprocess.run(
             ["python3", "saphyra.py", url],
             cwd=str(get_tools_dir() / "Saphyra-DDoS"),
@@ -134,7 +134,7 @@ class Saphyra(HackingTool):
 
 
 class DDOSTools(HackingToolsCollection):
-    TITLE = "DDOS Attack Tools"
+    TITLE = "DDoS 攻击工具"
     TOOLS = [DDoSTool(), SlowLoris(), Asyncrone(), UFONet(), GoldenEye(), Saphyra()]
 
 

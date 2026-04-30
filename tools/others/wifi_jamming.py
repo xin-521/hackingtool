@@ -7,7 +7,7 @@ from rich import box
 
 class WifiJammerNG(HackingTool):
     TITLE = "WifiJammer-NG"
-    DESCRIPTION = "Continuously jam all wifi clients and access points within range."
+    DESCRIPTION = "持续干扰范围内所有 WiFi 客户端和接入点。"
     SUPPORTED_OS = ["linux"]
     REQUIRES_WIFI = True
     INSTALL_COMMANDS = [
@@ -22,8 +22,8 @@ class WifiJammerNG(HackingTool):
 
 class KawaiiDeauther(HackingTool):
     TITLE = "KawaiiDeauther"
-    DESCRIPTION = "Kawaii Deauther is a pentest toolkit whose goal is to perform \n " \
-                  "jam on WiFi clients/routers and spam many fake AP for testing purposes."
+    DESCRIPTION = "Kawaii Deauther 是一个渗透测试工具包，用于干扰 WiFi 客户端/路由器\n" \
+                  "并生成大量虚假 AP 进行测试。"
     SUPPORTED_OS = ["linux"]
     REQUIRES_WIFI = True
     INSTALL_COMMANDS = [
@@ -35,7 +35,7 @@ class KawaiiDeauther(HackingTool):
 
 
 class WifiJammingTools(HackingToolsCollection):
-    TITLE = "Wifi Deauthenticate"
+    TITLE = "WiFi 取消认证攻击"
     TOOLS = [
         WifiJammerNG(),
         KawaiiDeauther()

@@ -6,41 +6,41 @@ from rich import box
 
 
 class TerminalMultiplexer(HackingTool):
-    TITLE = "Terminal Multiplexer"
+    TITLE = "终端复用器"
     DESCRIPTION = (
-        "Terminal Multiplexer (tilix) is a tiling terminal emulator that "
-        "allows opening several terminal sessions inside one window."
+        "终端复用器 (tilix) 是一个平铺终端模拟器，"
+        "允许在一个窗口中打开多个终端会话。"
     )
-    # Bug 19 fix: tilix is a Debian/Ubuntu package only — mark Linux-only
+    # Bug 19 修复: tilix 仅适用于 Debian/Ubuntu - 标记为 Linux 专用
     INSTALL_COMMANDS = ["sudo apt-get install -y tilix"]
     SUPPORTED_OS = ["linux"]
 
     def __init__(self):
-        # Py3-4 fix: super(TerminalMultiplexer, self) → super()
+        # Py3-4 修复: super(TerminalMultiplexer, self) → super()
         super().__init__(runnable=False)
 
 
 class Crivo(HackingTool):
     TITLE = "Crivo"
     DESCRIPTION = (
-        "A tool for extracting and filtering URLs, IPs, domains, and subdomains\n"
-        "from web pages or text, with built-in web scraping capabilities.\n"
-        "See: python3 crivo_cli.py -h"
+        "用于从网页或文本中提取和过滤 URL、IP、域名和子域名的工具，\n"
+        "具有内置的网络爬取功能。\n"
+        "参见: python3 crivo_cli.py -h"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/GMDSantana/crivo.git",
-        # Bug 18 verify: this is correct — cd and pip in same string works
+        # Bug 18 验证: 这是正确的 - cd 和 pip 在同一字符串中可以正常工作
         "cd crivo && pip install --user -r requirements.txt",
     ]
     PROJECT_URL = "https://github.com/GMDSantana/crivo"
 
     def __init__(self):
-        # Py3-4 fix: super(Crivo, self) → super()
+        # Py3-4 修复: super(Crivo, self) → super()
         super().__init__(runnable=False)
 
 
 class MixTools(HackingToolsCollection):
-    TITLE = "Mix tools"
+    TITLE = "混合工具"
     TOOLS = [
         TerminalMultiplexer(),
         Crivo()

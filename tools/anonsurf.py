@@ -4,14 +4,14 @@ from core import HackingTool, HackingToolsCollection, console
 
 
 class AnonymouslySurf(HackingTool):
-    TITLE = "Anonymously Surf"
+    TITLE = "匿名冲浪"
     DESCRIPTION = (
-        "It automatically overwrites the RAM when the system shuts down\n"
-        "and also changes your IP address."
+        "系统关闭时自动覆盖 RAM 内容\n"
+        "并更改您的 IP 地址。"
     )
-    # Bug 28 fix: was "cd kali-anonsurf && ./installer.sh && cd .. && sudo rm -r kali-anonsurf"
-    # Deleting the source on install means there is no retry if install fails.
-    # Now kept in a separate step so failure does not destroy the source.
+    # Bug 28 修复: 原来是 "cd kali-anonsurf && ./installer.sh && cd .. && sudo rm -r kali-anonsurf"
+    # 安装时删除源意味着如果安装失败无法重试。
+    # 现在保留在单独的步骤中，失败不会破坏源。
     INSTALL_COMMANDS = [
         "git clone https://github.com/Und3rf10w/kali-anonsurf.git",
         "cd kali-anonsurf && sudo ./installer.sh",
@@ -21,17 +21,17 @@ class AnonymouslySurf(HackingTool):
     SUPPORTED_OS = ["linux"]
 
     def __init__(self):
-        super().__init__([("Stop", self.stop)])
+        super().__init__([("停止", self.stop)])
 
     def stop(self):
         import subprocess
-        console.print("[bold magenta]Stopping Anonsurf...[/bold magenta]")
+        console.print("[bold magenta]正在停止匿名冲浪...[/bold magenta]")
         subprocess.run(["sudo", "anonsurf", "stop"])
 
 
 class Multitor(HackingTool):
-    TITLE = "Multitor"
-    DESCRIPTION = "How to stay in multi places at the same time."
+    TITLE = "多 Tor"
+    DESCRIPTION = "如何同时存在于多个地方。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/trimstray/multitor.git",
         "cd multitor && sudo bash setup.sh install",
@@ -47,7 +47,7 @@ class Multitor(HackingTool):
 
 
 class AnonSurfTools(HackingToolsCollection):
-    TITLE = "Anonymously Hiding Tools"
+    TITLE = "匿名隐藏工具"
     TOOLS = [
         AnonymouslySurf(),
         Multitor(),

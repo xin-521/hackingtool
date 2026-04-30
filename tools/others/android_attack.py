@@ -7,8 +7,8 @@ from rich import box
 
 class Keydroid(HackingTool):
     TITLE = "Keydroid"
-    DESCRIPTION = "Android Keylogger + Reverse Shell\n" \
-                  "[!] You have to install Some Manually Refer Below Link:\n " \
+    DESCRIPTION = "Android 键盘记录器 + 反向 Shell\n" \
+                  "[!] 你需要手动安装一些依赖，请参考以下链接:\n " \
                   "[+] https://github.com/F4dl0/keydroid"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["git clone https://github.com/F4dl0/keydroid.git"]
@@ -18,8 +18,8 @@ class Keydroid(HackingTool):
 
 class MySMS(HackingTool):
     TITLE = "MySMS"
-    DESCRIPTION = "Script that generates an Android App to hack SMS through WAN \n" \
-                  "[!] You have to install Some Manually Refer Below Link:\n\t " \
+    DESCRIPTION = "生成 Android 应用程序通过 WAN 窃取短信的脚本\n" \
+                  "[!] 你需要手动安装一些依赖，请参考以下链接:\n\t " \
                   "[+] https://github.com/papusingh2sms/mysms"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = [
@@ -29,10 +29,9 @@ class MySMS(HackingTool):
 
 
 class LockPhish(HackingTool):
-    TITLE = "Lockphish (Grab target LOCK PIN)"
-    DESCRIPTION = "Lockphish it's the first tool for phishing attacks on the " \
-                  "lock screen, designed to\n Grab Windows credentials,Android" \
-                  " PIN and iPhone Passcode using a https link."
+    TITLE = "Lockphish (获取目标锁屏 PIN)"
+    DESCRIPTION = "Lockphish 是首个针对锁屏的网络钓鱼攻击工具，\n" \
+                  "设计用于通过 https 链接获取 Windows 凭据、Android PIN 和 iPhone 密码。"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = [
         "git clone https://github.com/JasonJerry/lockphish.git"]
@@ -41,11 +40,11 @@ class LockPhish(HackingTool):
 
 
 class Droidcam(HackingTool):
-    TITLE = "DroidCam (Capture Image)"
-    DESCRIPTION = "Powerful Tool For Grab Front Camera Snap Using A Link"
+    TITLE = "DroidCam (捕获图像)"
+    DESCRIPTION = "通过链接捕获前置摄像头照片的强大工具"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = [
-        # Bug 16 fix: missing comma caused two strings to be implicitly concatenated into one
+        # Bug 16 修复: 缺少逗号导致两个字符串隐式拼接
         "git clone https://github.com/kinghacker0/WishFish.git",
         "sudo apt install -y php wget openssh-client",
     ]
@@ -54,9 +53,9 @@ class Droidcam(HackingTool):
 
 
 class EvilApp(HackingTool):
-    TITLE = "EvilApp (Hijack Session)"
-    DESCRIPTION = "EvilApp is a script to generate Android App that can " \
-                  "hijack authenticated sessions in cookies."
+    TITLE = "EvilApp (会话劫持)"
+    DESCRIPTION = "EvilApp 是一个生成 Android 应用程序的脚本，\n" \
+                  "可以劫持 cookie 中的认证会话。"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = [
         "git clone https://github.com/crypticterminal/EvilApp.git"]
@@ -65,7 +64,7 @@ class EvilApp(HackingTool):
 
 
 class AndroidAttackTools(HackingToolsCollection):
-    TITLE = "Android Hacking tools"
+    TITLE = "Android 攻击工具"
     TOOLS = [
         Keydroid(),
         MySMS(),

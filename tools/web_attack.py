@@ -7,7 +7,7 @@ from rich.prompt import Prompt
 
 class Web2Attack(HackingTool):
     TITLE = "Web2Attack"
-    DESCRIPTION = "Web hacking framework with tools, exploits by python"
+    DESCRIPTION = "Web 黑客框架，包含 Python 编写的工具和漏洞利用"
     INSTALL_COMMANDS = [
         "git clone https://github.com/santatic/web2attack.git"
     ]
@@ -18,9 +18,9 @@ class Web2Attack(HackingTool):
 class Skipfish(HackingTool):
     TITLE = "Skipfish"
     DESCRIPTION = (
-        "Skipfish – Fully automated, active web application "
-        "security reconnaissance tool \n "
-        "Usage: skipfish -o [FolderName] targetip/site"
+        "Skipfish – 全自动主动 Web 应用程序\n"
+        "安全侦察工具\n"
+        "用法: skipfish -o [文件夹名] 目标IP/网站"
     )
     RUN_COMMANDS = [
         "sudo skipfish -h",
@@ -32,11 +32,11 @@ class Skipfish(HackingTool):
 
 
 class SubDomainFinder(HackingTool):
-    TITLE = "SubDomain Finder"
+    TITLE = "子域名查找器"
     DESCRIPTION = (
-        "Sublist3r is a python tool designed to enumerate "
-        "subdomains of websites using OSINT \n "
-        "Usage:\n\t[1] python3 sublist3r.py -d example.com \n"
+        "Sublist3r 是一个 Python 工具，旨在通过 OSINT 枚举\n"
+        "网站的子域名\n"
+        "用法:\n\t[1] python3 sublist3r.py -d example.com \n"
         "[2] python3 sublist3r.py -d example.com -p 80,443"
     )
     INSTALL_COMMANDS = [
@@ -49,9 +49,9 @@ class SubDomainFinder(HackingTool):
 
 
 class CheckURL(HackingTool):
-    TITLE = "CheckURL"
+    TITLE = "URL 检查器"
     DESCRIPTION = (
-        "Detect evil urls that uses IDN Homograph Attack.\n\t"
+        "检测使用 IDN 同形异义字攻击的恶意 URL\n\t"
         "[!] python3 checkURL.py --url google.com"
     )
     INSTALL_COMMANDS = ["git clone https://github.com/UndeadSec/checkURL.git"]
@@ -60,25 +60,25 @@ class CheckURL(HackingTool):
 
 
 class Blazy(HackingTool):
-    TITLE = "Blazy(Also Find ClickJacking)"
-    DESCRIPTION = "Blazy is a modern login page bruteforcer"
+    TITLE = "Blazy (含点击劫持检测)"
+    DESCRIPTION = "Blazy 是一个现代化的登录页面暴力破解工具"
     INSTALL_COMMANDS = []
     RUN_COMMANDS = []
     PROJECT_URL = "https://github.com/UltimateHackers/Blazy"
     ARCHIVED = True
-    ARCHIVED_REASON = "Python 2 only (pip2.7/python2.7). Repo archived/unmaintained."
+    ARCHIVED_REASON = "仅支持 Python 2。仓库已归档/无人维护。"
 
     def __init__(self):
         super().__init__(installable=False, runnable=False)
 
 
 class SubDomainTakeOver(HackingTool):
-    TITLE = "Sub-Domain TakeOver"
+    TITLE = "子域名劫持"
     DESCRIPTION = (
-        "Sub-domain takeover vulnerability occur when a sub-domain "
-        "\n (subdomain.example.com) is pointing to a service "
-        "(e.g: GitHub, AWS/S3,..)\nthat has been removed or deleted.\n"
-        "Usage:python3 takeover.py -d www.domain.com -v"
+        "当子域名指向已删除或删除的服务\n"
+        "(例如: GitHub, AWS/S3 等) 时，\n"
+        "会发生子域名劫持漏洞。\n"
+        "用法:python3 takeover.py -d www.domain.com -v"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/edoardottt/takeover.git",
@@ -93,10 +93,10 @@ class SubDomainTakeOver(HackingTool):
 class Dirb(HackingTool):
     TITLE = "Dirb"
     DESCRIPTION = (
-        "DIRB is a Web Content Scanner. It looks for existing "
-        "(and/or hidden) Web Objects.\n"
-        "It basically works by launching a dictionary based "
-        "attack against \n a web server and analyzing the response."
+        "DIRB 是一个 Web 内容扫描器。它查找现有的\n"
+        "(和/或隐藏的) Web 对象。\n"
+        "它基本上通过对 Web 服务器发起基于字典的攻击\n"
+        "并分析响应来工作。"
     )
     INSTALL_COMMANDS = [
         "git clone https://gitlab.com/kalilinux/packages/dirb.git",
@@ -105,15 +105,15 @@ class Dirb(HackingTool):
     PROJECT_URL = "https://gitlab.com/kalilinux/packages/dirb"
 
     def run(self):
-        uinput = input("Enter Url >> ")
+        uinput = input("输入 URL >> ")
         subprocess.run(["sudo", "dirb", uinput])
 
 
 class Nuclei(HackingTool):
-    TITLE = "Nuclei (Vulnerability Scanner)"
+    TITLE = "Nuclei (漏洞扫描器)"
     DESCRIPTION = (
-        "Fast, template-based vulnerability scanner used by 50k+ security teams.\n"
-        "Usage: nuclei -u https://example.com"
+        "快速基于模板的漏洞扫描器，被 5 万+安全团队使用。\n"
+        "用法: nuclei -u https://example.com"
     )
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -125,10 +125,10 @@ class Nuclei(HackingTool):
 
 
 class Ffuf(HackingTool):
-    TITLE = "ffuf (Web Fuzzer)"
+    TITLE = "ffuf (Web 模糊测试器)"
     DESCRIPTION = (
-        "Fast web fuzzer — content discovery, parameter fuzzing, vhost discovery.\n"
-        "Usage: ffuf -w wordlist.txt -u https://example.com/FUZZ"
+        "快速 Web 模糊测试器 - 内容发现、参数模糊测试、虚拟主机发现。\n"
+        "用法: ffuf -w wordlist.txt -u https://example.com/FUZZ"
     )
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -139,10 +139,10 @@ class Ffuf(HackingTool):
 
 
 class Feroxbuster(HackingTool):
-    TITLE = "Feroxbuster (Directory Brute Force)"
+    TITLE = "Feroxbuster (目录暴力破解)"
     DESCRIPTION = (
-        "Fast, recursive content discovery tool written in Rust.\n"
-        "Usage: feroxbuster -u https://example.com -w wordlist.txt"
+        "用 Rust 编写的快速递归内容发现工具。\n"
+        "用法: feroxbuster -u https://example.com -w wordlist.txt"
     )
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = [
@@ -154,10 +154,10 @@ class Feroxbuster(HackingTool):
 
 
 class Nikto(HackingTool):
-    TITLE = "Nikto (Web Server Scanner)"
+    TITLE = "Nikto (Web 服务器扫描器)"
     DESCRIPTION = (
-        "Scan web servers for dangerous files, outdated software, misconfigurations.\n"
-        "Usage: nikto -h https://example.com"
+        "扫描 Web 服务器中的危险文件、过时软件、错误配置。\n"
+        "用法: nikto -h https://example.com"
     )
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["sudo apt-get install -y nikto"]
@@ -166,10 +166,10 @@ class Nikto(HackingTool):
 
 
 class Wafw00f(HackingTool):
-    TITLE = "wafw00f (WAF Detector)"
+    TITLE = "wafw00f (WAF 检测器)"
     DESCRIPTION = (
-        "Fingerprint and identify Web Application Firewalls (WAF).\n"
-        "Usage: wafw00f https://example.com"
+        "指纹识别和检测 Web 应用程序防火墙 (WAF)。\n"
+        "用法: wafw00f https://example.com"
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/EnableSecurity/wafw00f.git",
@@ -180,10 +180,10 @@ class Wafw00f(HackingTool):
 
 
 class Katana(HackingTool):
-    TITLE = "Katana (Web Crawler)"
+    TITLE = "Katana (Web 爬虫)"
     DESCRIPTION = (
-        "Next-generation crawling and spidering framework from ProjectDiscovery.\n"
-        "Usage: katana -u https://example.com"
+        "ProjectDiscovery 的新一代爬取和蜘蛛框架。\n"
+        "用法: katana -u https://example.com"
     )
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -194,8 +194,8 @@ class Katana(HackingTool):
 
 
 class Gobuster(HackingTool):
-    TITLE = "Gobuster (Dir/DNS/Vhost Brute Force)"
-    DESCRIPTION = "Directory/file, DNS, and vhost brute-forcing tool written in Go."
+    TITLE = "Gobuster (目录/DNS/虚拟主机暴力破解)"
+    DESCRIPTION = "用 Go 编写的目录/文件、DNS 和虚拟主机暴力破解工具。"
     REQUIRES_GO = True
     INSTALL_COMMANDS = ["go install github.com/OJ/gobuster/v3@latest"]
     RUN_COMMANDS = ["gobuster --help"]
@@ -203,16 +203,16 @@ class Gobuster(HackingTool):
 
 
 class Dirsearch(HackingTool):
-    TITLE = "Dirsearch (Web Path Discovery)"
-    DESCRIPTION = "Web path brute-forcing tool for discovering directories and files on web servers."
+    TITLE = "Dirsearch (Web 路径发现)"
+    DESCRIPTION = "用于发现 Web 服务器上目录和文件的 Web 路径暴力破解工具。"
     INSTALL_COMMANDS = ["pip install --user dirsearch"]
     RUN_COMMANDS = ["dirsearch --help"]
     PROJECT_URL = "https://github.com/maurosoria/dirsearch"
 
 
 class OwaspZap(HackingTool):
-    TITLE = "OWASP ZAP (Web App Scanner)"
-    DESCRIPTION = "Full-featured web application security scanner — proxy, spider, fuzzer, scanner."
+    TITLE = "OWASP ZAP (Web 应用扫描器)"
+    DESCRIPTION = "功能齐全的 Web 应用程序安全扫描器 - 代理、爬虫、模糊测试器、扫描器。"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["sudo apt-get install -y zaproxy"]
     RUN_COMMANDS = ["zaproxy --help"]
@@ -220,24 +220,24 @@ class OwaspZap(HackingTool):
 
 
 class TestSSL(HackingTool):
-    TITLE = "testssl.sh (TLS/SSL Checker)"
-    DESCRIPTION = "Check TLS/SSL ciphers, protocols, and cryptographic flaws on any port."
+    TITLE = "testssl.sh (TLS/SSL 检查器)"
+    DESCRIPTION = "检查任何端口上的 TLS/SSL 密码、协议和加密缺陷。"
     INSTALL_COMMANDS = ["git clone https://github.com/drwetter/testssl.sh.git"]
     RUN_COMMANDS = ["cd testssl.sh && ./testssl.sh --help"]
     PROJECT_URL = "https://github.com/drwetter/testssl.sh"
 
 
 class Arjun(HackingTool):
-    TITLE = "Arjun (HTTP Parameter Discovery)"
-    DESCRIPTION = "HTTP parameter discovery suite that finds hidden GET/POST parameters."
+    TITLE = "Arjun (HTTP 参数发现)"
+    DESCRIPTION = "HTTP 参数发现套件，用于查找隐藏的 GET/POST 参数。"
     INSTALL_COMMANDS = ["pip install --user arjun"]
     RUN_COMMANDS = ["arjun --help"]
     PROJECT_URL = "https://github.com/s0md3v/Arjun"
 
 
 class Caido(HackingTool):
-    TITLE = "Caido (Web Security Auditing)"
-    DESCRIPTION = "Lightweight, modern web security auditing toolkit — Burp Suite alternative written in Rust."
+    TITLE = "Caido (Web 安全审计)"
+    DESCRIPTION = "轻量级现代化 Web 安全审计工具 - Burp Suite 的 Rust 替代品。"
     INSTALL_COMMANDS = [
         "curl -sSL https://caido.download/releases/latest/caido-cli-linux-x86_64.tar.gz | sudo tar xz -C /usr/local/bin",
     ]
@@ -247,15 +247,15 @@ class Caido(HackingTool):
 
 
 class Mitmproxy(HackingTool):
-    TITLE = "mitmproxy (Intercepting Proxy)"
-    DESCRIPTION = "Interactive TLS-capable intercepting HTTP proxy for pentesters and developers."
+    TITLE = "mitmproxy (拦截代理)"
+    DESCRIPTION = "交互式支持 TLS 的拦截 HTTP 代理，适用于渗透测试人员和开发人员。"
     INSTALL_COMMANDS = ["pip install --user mitmproxy"]
     RUN_COMMANDS = ["mitmproxy --version"]
     PROJECT_URL = "https://github.com/mitmproxy/mitmproxy"
 
 
 class WebAttackTools(HackingToolsCollection):
-    TITLE = "Web Attack tools"
+    TITLE = "Web 攻击工具"
     DESCRIPTION = ""
     TOOLS = [
         Web2Attack(),

@@ -2,7 +2,7 @@
 
 <img src="images/logo.svg" alt="HackingTool" width="600">
 
-<p><b>All-in-One Hacking Tool for Security Researchers & Pentesters</b></p>
+<p><b>安全研究人员和渗透测试人员的一站式黑客工具</b></p>
 
 [![License](https://img.shields.io/github/license/Z4nzu/hackingtool)](LICENSE)&nbsp;
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)&nbsp;
@@ -17,35 +17,35 @@
 ![](https://img.shields.io/badge/19_Tags-FF61DC?style=for-the-badge)
 ![](https://img.shields.io/badge/Linux_%7C_Kali_%7C_Parrot_%7C_macOS-FFA116?style=for-the-badge&logo=linux&logoColor=white)
 
-<a href="#installation"><img src="https://img.shields.io/badge/Install_Now-00FF88?style=for-the-badge&logo=rocket&logoColor=black" alt="Install Now"></a>&nbsp;
-<a href="#quick-commands"><img src="https://img.shields.io/badge/Quick_Commands-7B61FF?style=for-the-badge&logo=terminal&logoColor=white" alt="Quick Commands"></a>&nbsp;
-<a href="https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md"><img src="https://img.shields.io/badge/Suggest_a_Tool-FF61DC?style=for-the-badge&logo=plus&logoColor=white" alt="Suggest a Tool"></a>
+<a href="#installation"><img src="https://img.shields.io/badge/Install_Now-00FF88?style=for-the-badge&logo=rocket&logoColor=black" alt="立即安装"></a>&nbsp;
+<a href="#quick-commands"><img src="https://img.shields.io/badge/Quick_Commands-7B61FF?style=for-the-badge&logo=terminal&logoColor=white" alt="快速命令"></a>&nbsp;
+<a href="https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md"><img src="https://img.shields.io/badge/Suggest_a_Tool-FF61DC?style=for-the-badge&logo=plus&logoColor=white" alt="推荐工具"></a>
 
 </div>
 
 ---
 
 
-## What's New in v2.0.0
+## v2.0.0 新功能
 
 <table>
 <tr><td>
 
-| | Feature | Description |
+| | 功能 | 描述 |
 |:---:|---|---|
-| **🐍** | **Python 3.10+** | All Python 2 code removed, modern syntax throughout |
-| **🖥** | **OS-aware menus** | Linux-only tools hidden automatically on macOS |
-| **📦** | **185+ tools** | 35 new modern tools added across 6 categories |
-| **🔍** | **Search** | Type `/` to search all tools by name, description, or keyword |
-| **🏷** | **Tag filter** | Type `t` to filter by 19 tags — osint, web, c2, cloud, mobile... |
-| **💡** | **Recommend** | Type `r` — "I want to scan a network" → shows relevant tools |
-| **✅** | **Install status** | ✔/✘ shown next to every tool — know what's ready |
-| **⚡** | **Install all** | Option `97` in any category — batch install at once |
-| **🔄** | **Smart update** | Each tool has Update — auto-detects git pull / pip upgrade / go install |
-| **📂** | **Open folder** | Jump into any tool's directory for manual inspection |
-| **🐳** | **Docker** | Builds locally — no unverified external images |
-| **🚀** | **One-liner install** | `curl -sSL .../install.sh \| sudo bash` — zero manual steps |
-| **🏢** | **3 new categories** | Active Directory, Cloud Security, Mobile Security |
+| **🐍** | **Python 3.10+** | 移除所有 Python 2 代码，全面使用现代语法 |
+| **🖥** | **操作系统感知菜单** | 在 macOS 上自动隐藏仅 Linux 工具 |
+| **📦** | **185+ 工具** | 在 6 个类别中新增 35 个现代工具 |
+| **🔍** | **搜索** | 输入 `/` 按名称、描述或关键词搜索所有工具 |
+| **🏷** | **标签过滤** | 输入 `t` 按 19 个标签过滤 — osint、web、c2、cloud、mobile... |
+| **💡** | **推荐** | 输入 `r` — "我想扫描网络" → 显示相关工具 |
+| **✅** | **安装状态** | 每个工具旁显示 ✔/✘ — 了解已准备就绪的工具 |
+| **⚡** | **一键安装** | 在任何类别中选择 `97` — 批量安装所有工具 |
+| **🔄** | **智能更新** | 每个工具都有更新选项 — 自动检测 git pull / pip upgrade / go install |
+| **📂** | **打开文件夹** | 进入任何工具的目录进行手动检查 |
+| **🐳** | **Docker** | 本地构建 — 无需未经验证的外部镜像 |
+| **🚀** | **一行命令安装** | `curl -sSL .../install.sh | sudo bash` — 零手动步骤 |
+| **🏢** | **3 个新类别** | 活动目录、云安全、移动安全 |
 
 </td></tr>
 </table>
@@ -54,41 +54,40 @@
 
 ---
 
-## Quick Commands
+## 快速命令
 
 <div align="center">
 
-| Command | Action | Works in |
+| 命令 | 功能 | 适用位置 |
 |:---:|---|:---:|
-| `/query` | **Search** — find tools instantly by keyword | Main menu |
-| `t` | **Tags** — filter by osint, scanner, c2, cloud, mobile... | Main menu |
-| `r` | **Recommend** — "I want to do X" → matching tools | Main menu |
-| `?` | **Help** — quick reference card | Everywhere |
-| `q` | **Quit** — exit from any depth | Everywhere |
-| `97` | **Install All** — batch install all tools in category | Category |
-| `99` | **Back** — return to previous menu | Everywhere |
+| `/query` | **搜索** — 按关键词即时查找工具 | 主菜单 |
+| `t` | **标签** — 按 osint、scanner、c2、cloud、mobile 等过滤 | 主菜单 |
+| `r` | **推荐** — "我想做 X" → 匹配的工具 | 主菜单 |
+| `?` | **帮助** — 快速参考卡片 | 任何位置 |
+| `q` | **退出** — 从任何深度退出 | 任何位置 |
+| `97` | **全部安装** — 批量安装类别中的所有工具 | 类别 |
+| `99` | **返回** — 返回上一级菜单 | 任何位置 |
 
 </div>
 
 ---
 
-
-## Tool Categories
+## 工具分类
 
 <div align="center">
 
-| # | Category | Tools | | # | Category | Tools |
+| # | 类别 | 工具数 | | # | 类别 | 工具数 |
 |:---:|---|:---:|---|:---:|---|:---:|
-| 1 | 🛡 [Anonymously Hiding](#anonymously-hiding-tools) | 2 | | 11 | 🧰 [Exploit Framework](#exploit-framework) | 4 |
-| 2 | 🔍 [Information Gathering](#information-gathering-tools) | 26 | | 12 | 🔁 [Reverse Engineering](#reverse-engineering-tools) | 5 |
-| 3 | 📚 [Wordlist Generator](#wordlist-generator) | 7 | | 13 | ⚡ [DDOS Attack](#ddos-attack-tools) | 5 |
-| 4 | 📶 [Wireless Attack](#wireless-attack-tools) | 13 | | 14 | 🖥 [RAT](#remote-administrator-tools-rat) | 1 |
-| 5 | 🧩 [SQL Injection](#sql-injection-tools) | 7 | | 15 | 💥 [XSS Attack](#xss-attack-tools) | 9 |
-| 6 | 🎣 [Phishing Attack](#phishing-attack-tools) | 17 | | 16 | 🖼 [Steganography](#steganography-tools) | 4 |
-| 7 | 🌐 [Web Attack](#web-attack-tools) | 20 | | 17 | 🏢 [Active Directory](#active-directory-tools) | 6 |
-| 8 | 🔧 [Post Exploitation](#post-exploitation-tools) | 10 | | 18 | ☁ [Cloud Security](#cloud-security-tools) | 4 |
-| 9 | 🕵 [Forensics](#forensic-tools) | 8 | | 19 | 📱 [Mobile Security](#mobile-security-tools) | 3 |
-| 10 | 📦 [Payload Creation](#payload-creation-tools) | 8 | | 20 | ✨ [Other Tools](#other-tools) | 24 |
+| 1 | 🛡 [匿名隐藏](#匿名隐藏工具) | 2 | | 11 | 🧰 [漏洞利用框架](#漏洞利用框架) | 4 |
+| 2 | 🔍 [信息收集](#信息收集工具) | 26 | | 12 | 🔁 [逆向工程](#逆向工程工具) | 5 |
+| 3 | 📚 [字典生成器](#字典生成器) | 7 | | 13 | ⚡ [DDOS 攻击](#ddos-攻击工具) | 5 |
+| 4 | 📶 [无线攻击](#无线攻击工具) | 13 | | 14 | 🖥 [远程管理工具](#远程管理工具-rat) | 1 |
+| 5 | 🧩 [SQL 注入](#sql-注入工具) | 7 | | 15 | 💥 [XSS 攻击](#xss-攻击工具) | 9 |
+| 6 | 🎣 [钓鱼攻击](#钓鱼攻击工具) | 17 | | 16 | 🖼 [隐写术](#隐写术工具) | 4 |
+| 7 | 🌐 [Web 攻击](#web-攻击工具) | 20 | | 17 | 🏢 [活动目录](#活动目录工具) | 6 |
+| 8 | 🔧 [后渗透攻击](#后渗透攻击工具) | 10 | | 18 | ☁ [云安全](#云安全工具) | 4 |
+| 9 | 🕵 [数字取证](#数字取证工具) | 8 | | 19 | 📱 [移动安全](#移动安全工具) | 3 |
+| 10 | 📦 [负载创建](#负载创建工具) | 8 | | 20 | ✨ [其他工具](#其他工具) | 24 |
 
 </div>
 
@@ -96,20 +95,19 @@
 
 ---
 
-
-## 🛡 Anonymously Hiding Tools
+## 🛡 匿名隐藏工具
 
 - [Anonymously Surf](https://github.com/Und3rf10w/kali-anonsurf)
 - [Multitor](https://github.com/trimstray/multitor)
 
 
 
-## 🔍 Information Gathering Tools
+## 🔍 信息收集工具
 
 - [Network Map (nmap)](https://github.com/nmap/nmap)
 - [Dracnmap](https://github.com/Screetsec/Dracnmap)
-- Port scanning
-- Host to IP
+- 端口扫描
+- 主机转 IP
 - [Xerosploit](https://github.com/LionSec/xerosploit)
 - [RED HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
 - [ReconSpider](https://github.com/bhavsec/reconspider)
@@ -135,23 +133,23 @@
 
 
 
-## 📚 Wordlist Generator
+## 📚 字典生成器
 
 - [Cupp](https://github.com/Mebus/cupp)
 - [WordlistCreator](https://github.com/Z4nzu/wlcreator)
 - [Goblin WordGenerator](https://github.com/UndeadSec/GoblinWordGenerator)
-- [Password list (1.4B)](https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got)
+- [密码字典 (14亿)](https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got)
 - [Hashcat](https://github.com/hashcat/hashcat) ★
 - [John the Ripper](https://github.com/openwall/john) ★
 - [haiti](https://github.com/noraj/haiti) ★
 
 
 
-## 📶 Wireless Attack Tools
+## 📶 无线攻击工具
 
 - [WiFi-Pumpkin](https://github.com/P0cL4bs/wifipumpkin3)
 - [pixiewps](https://github.com/wiire/pixiewps)
-- [Bluetooth Honeypot (bluepot)](https://github.com/andrewmichaelsmith/bluepot)
+- [蓝牙蜜罐 (bluepot)](https://github.com/andrewmichaelsmith/bluepot)
 - [Fluxion](https://github.com/FluxionNetwork/fluxion)
 - [Wifiphisher](https://github.com/wifiphisher/wifiphisher)
 - [Wifite](https://github.com/derv82/wifite2)
@@ -165,7 +163,7 @@
 
 
 
-## 🧩 SQL Injection Tools
+## 🧩 SQL 注入工具
 
 - [Sqlmap](https://github.com/sqlmapproject/sqlmap)
 - [NoSqlMap](https://github.com/codingo/NoSQLMap)
@@ -177,7 +175,7 @@
 
 
 
-## 🎣 Phishing Attack Tools
+## 🎣 钓鱼攻击工具
 
 - [Autophisher](https://github.com/CodingRanjith/autophisher)
 - [PyPhisher](https://github.com/KasRoudra/PyPhisher)
@@ -188,7 +186,7 @@
 - [Evilginx3](https://github.com/kgretzky/evilginx2)
 - [I-See-You](https://github.com/Viralmaniar/I-See-You)
 - [SayCheese](https://github.com/hangetzzu/saycheese)
-- [QR Code Jacking](https://github.com/cryptedwolf/ohmyqr)
+- [二维码劫持](https://github.com/cryptedwolf/ohmyqr)
 - [BlackEye](https://github.com/thelinuxchoice/blackeye)
 - [ShellPhish](https://github.com/An0nUD4Y/shellphish)
 - [Thanos](https://github.com/TridevReddy/Thanos)
@@ -199,13 +197,13 @@
 
 
 
-## 🌐 Web Attack Tools
+## 🌐 Web 攻击工具
 
 - [Web2Attack](https://github.com/santatic/web2attack)
 - Skipfish
 - [Sublist3r](https://github.com/aboul3la/Sublist3r)
 - [CheckURL](https://github.com/UndeadSec/checkURL)
-- [Sub-Domain TakeOver](https://github.com/edoardottt/takeover)
+- [子域名接管](https://github.com/edoardottt/takeover)
 - [Dirb](https://gitlab.com/kalilinux/packages/dirb)
 - [Nuclei](https://github.com/projectdiscovery/nuclei) ★
 - [ffuf](https://github.com/ffuf/ffuf) ★
@@ -223,10 +221,10 @@
 
 
 
-## 🔧 Post Exploitation Tools
+## 🔧 后渗透攻击工具
 
 - [Vegile](https://github.com/Screetsec/Vegile)
-- [Chrome Keylogger](https://github.com/UndeadSec/HeraKeylogger)
+- [Chrome 键盘记录器](https://github.com/UndeadSec/HeraKeylogger)
 - [pwncat-cs](https://github.com/calebstewart/pwncat) ★
 - [Sliver](https://github.com/BishopFox/sliver) ★
 - [Havoc](https://github.com/HavocFramework/Havoc) ★
@@ -238,7 +236,7 @@
 
 
 
-## 🕵 Forensic Tools
+## 🕵 数字取证工具
 
 - Autopsy
 - Wireshark
@@ -251,12 +249,12 @@
 
 
 
-## 📦 Payload Creation Tools
+## 📦 负载创建工具
 
 - [The FatRat](https://github.com/Screetsec/TheFatRat)
 - [Brutal](https://github.com/Screetsec/Brutal)
 - [Stitch](https://nathanlopez.github.io/Stitch)
-- [MSFvenom Payload Creator](https://github.com/g0tmi1k/msfpc)
+- [MSFvenom 负载创建器](https://github.com/g0tmi1k/msfpc)
 - [Venom](https://github.com/r00t-3xp10it/venom)
 - [Spycam](https://github.com/indexnotfound404/spycam)
 - [Mob-Droid](https://github.com/kinghacker0/Mob-Droid)
@@ -264,7 +262,7 @@
 
 
 
-## 🧰 Exploit Framework
+## 🧰 漏洞利用框架
 
 - [RouterSploit](https://github.com/threat9/routersploit)
 - [WebSploit](https://github.com/The404Hacking/websploit)
@@ -273,7 +271,7 @@
 
 
 
-## 🔁 Reverse Engineering Tools
+## 🔁 逆向工程工具
 
 - [Androguard](https://github.com/androguard/androguard)
 - [Apk2Gold](https://github.com/lxdvs/apk2gold)
@@ -283,9 +281,9 @@
 
 
 
-## ⚡ DDOS Attack Tools
+## ⚡ DDOS 攻击工具
 
-- [DDoS Script](https://github.com/the-deepnet/ddos)
+- [DDoS 脚本](https://github.com/the-deepnet/ddos)
 - [SlowLoris](https://github.com/gkbrk/slowloris)
 - [Asyncrone](https://github.com/fatihsnsy/aSYNcrone)
 - [UFOnet](https://github.com/epsylon/ufonet)
@@ -293,17 +291,17 @@
 
 
 
-## 🖥 Remote Administrator Tools (RAT)
+## 🖥 远程管理工具 (RAT)
 
 - [Pyshell](https://github.com/knassar702/pyshell)
 
 
 
-## 💥 XSS Attack Tools
+## 💥 XSS 攻击工具
 
 - [DalFox](https://github.com/hahwul/dalfox)
-- [XSS Payload Generator](https://github.com/capture0x/XSS-LOADER)
-- [Extended XSS Searcher](https://github.com/Damian89/extended-xss-search)
+- [XSS 负载生成器](https://github.com/capture0x/XSS-LOADER)
+- [扩展型 XSS 搜索器](https://github.com/Damian89/extended-xss-search)
 - [XSS-Freak](https://github.com/PR0PH3CY33/XSS-Freak)
 - [XSpear](https://github.com/hahwul/XSpear)
 - [XSSCon](https://github.com/menkrep1337/XSSCon)
@@ -313,7 +311,7 @@
 
 
 
-## 🖼 Steganography Tools
+## 🖼 隐写术工具
 
 - SteganoHide
 - [StegoCracker](https://github.com/W1LDN16H7/StegoCracker)
@@ -321,7 +319,7 @@
 
 
 
-## 🏢 Active Directory Tools
+## 🏢 活动目录工具
 
 - [BloodHound](https://github.com/BloodHoundAD/BloodHound) ★
 - [NetExec (nxc)](https://github.com/Pennyw0rth/NetExec) ★
@@ -332,7 +330,7 @@
 
 
 
-## ☁ Cloud Security Tools
+## ☁ 云安全工具
 
 - [Prowler](https://github.com/prowler-cloud/prowler) ★
 - [ScoutSuite](https://github.com/nccgroup/ScoutSuite) ★
@@ -341,7 +339,7 @@
 
 
 
-## 📱 Mobile Security Tools
+## 📱 移动安全工具
 
 - [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) ★
 - [Frida](https://github.com/frida/frida) ★
@@ -349,104 +347,104 @@
 
 
 
-## ✨ Other Tools
+## ✨ 其他工具
 
-#### SocialMedia Bruteforce
-- [AllinOne SocialMedia Attack](https://github.com/Matrix07ksa/Brute_Force)
-- [Facebook Attack](https://github.com/Matrix07ksa/Brute_Force)
-- [Application Checker](https://github.com/jakuta-tech/underhanded)
+#### 社交媒体暴力破解
+- [社交媒体攻击一体化工具](https://github.com/Matrix07ksa/Brute_Force)
+- [Facebook 攻击](https://github.com/Matrix07ksa/Brute_Force)
+- [应用程序检查器](https://github.com/jakuta-tech/underhanded)
 
-#### Android Hacking Tools
+#### Android 黑客工具
 - [Keydroid](https://github.com/F4dl0/keydroid)
 - [MySMS](https://github.com/papusingh2sms/mysms)
 - [Lockphish](https://github.com/JasonJerry/lockphish)
 - [DroidCam / WishFish](https://github.com/kinghacker0/WishFish)
 - [EvilApp](https://github.com/crypticterminal/EvilApp)
 
-#### IDN Homograph Attack
+#### IDN 同形异义攻击
 - [EvilURL](https://github.com/UndeadSec/EvilURL)
 
-#### Email Verify Tools
+#### 邮箱验证工具
 - [Knockmail](https://github.com/4w4k3/KnockMail)
 
-#### Hash Cracking Tools
+#### 哈希破解工具
 - [Hash Buster](https://github.com/s0md3v/Hash-Buster)
 
-#### Wifi Deauthenticate
+#### WiFi 解除认证
 - [WifiJammer-NG](https://github.com/MisterBianco/wifijammer-ng)
 - [KawaiiDeauther](https://github.com/aryanrtm/KawaiiDeauther)
 
-#### SocialMedia Finder
-- [Find SocialMedia By Facial Recognition](https://github.com/Greenwolf/social_mapper)
-- [Find SocialMedia By UserName](https://github.com/xHak9x/finduser)
+#### 社交媒体查找器
+- [通过面部识别查找社交媒体](https://github.com/Greenwolf/social_mapper)
+- [通过用户名查找社交媒体](https://github.com/xHak9x/finduser)
 - [Sherlock](https://github.com/sherlock-project/sherlock)
 - [SocialScan](https://github.com/iojw/socialscan)
 
-#### Payload Injector
+#### 负载注入器
 - [Debinject](https://github.com/UndeadSec/Debinject)
 - [Pixload](https://github.com/chinarulezzz/pixload)
 
-#### Web Crawling
+#### Web 爬虫
 - [Gospider](https://github.com/jaeles-project/gospider)
 
-#### Mix Tools
-- Terminal Multiplexer (tilix)
+#### 混合工具
+- 终端多路复用器 (tilix)
 - [Crivo](https://github.com/GMDSantana/crivo)
 
 
 ---
 
-## Contributing — Add a New Tool
+## 贡献指南 — 添加新工具
 
 <table>
 <tr>
 <td width="50%">
 
-### Open an Issue
+### 提交 Issue
 
-> **Title:** `[Tool Request] ToolName — Category`
+> **标题:** `[工具请求] 工具名称 — 类别`
 
-Use the [Tool Request](.github/ISSUE_TEMPLATE/tool_request.md) template.
+使用 [工具请求模板](.github/ISSUE_TEMPLATE/tool_request.md)。
 
-Required: tool name, GitHub URL, category, OS, install command, reason.
+必需：工具名称、GitHub URL、类别、操作系统、安装命令、原因。
 
 </td>
 <td width="50%">
 
-### Open a Pull Request
+### 提交 Pull Request
 
-> **Title:** `[New Tool] ToolName — Category`
+> **标题:** `[新工具] 工具名称 — 类别`
 
-Use the [PR template](.github/PULL_REQUEST_TEMPLATE.md) checklist.
+使用 [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) 清单。
 
-Required: class in `tools/*.py`, TITLE, DESCRIPTION, INSTALL/RUN commands, SUPPORTED_OS, test locally.
+必需：`tools/*.py` 中的类、TITLE、DESCRIPTION、INSTALL/RUN 命令、SUPPORTED_OS、本地测试。
 
 </td>
 </tr>
 </table>
 
-> Issues or PRs that don't follow the title format will be closed without review.
+> 不遵循标题格式的 Issue 或 PR 将被关闭而不进行审查。
 
 ---
 
-## Installation
+## 安装
 
 <table>
 <tr>
 <td>
 
-### One-liner (recommended)
+### 一行命令安装（推荐）
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/Z4nzu/hackingtool/master/install.sh | sudo bash
 ```
 
-Handles everything — prerequisites, clone, venv, launcher.
+自动处理所有内容 — 先决条件、克隆、venv、启动器。
 
 </td>
 <td>
 
-### Manual
+### 手动安装
 
 ```bash
 git clone https://github.com/Z4nzu/hackingtool.git
@@ -454,7 +452,7 @@ cd hackingtool
 sudo python3 install.py
 ```
 
-Then run: `hackingtool`
+然后运行: `hackingtool`
 
 </td>
 </tr>
@@ -464,35 +462,35 @@ Then run: `hackingtool`
 ### Docker
 
 ```bash
-# Build
+# 构建
 docker build -t hackingtool .
 
-# Run (direct)
+# 运行（直接）
 docker run -it --rm hackingtool
 
-# Run (Compose — recommended)
+# 运行（Compose — 推荐）
 docker compose up -d
 docker exec -it hackingtool bash
 
-# Dev mode (live source mount)
+# 开发模式（实时源码挂载）
 docker compose --profile dev up
 docker exec -it hackingtool-dev bash
 
-# Stop
-docker compose down        # stop container
-docker compose down -v     # also remove data volume
+# 停止
+docker compose down        # 停止容器
+docker compose down -v     # 同时删除数据卷
 ```
 
 
 
-### Requirements
+### 系统要求
 
-| Dependency | Version | Needed for |
+| 依赖项 | 版本 | 用途 |
 |---|---|---|
-| Python | 3.10+ | Core |
+| Python | 3.10+ | 核心 |
 | Go | 1.21+ | nuclei, ffuf, amass, httpx, katana, dalfox, gobuster, subfinder |
-| Ruby | any | haiti, evil-winrm |
-| Docker | any | Mythic, MobSF (optional) |
+| Ruby | 任意 | haiti, evil-winrm |
+| Docker | 任意 | Mythic, MobSF（可选） |
 
 ```bash
 pip install -r requirements.txt
@@ -500,28 +498,28 @@ pip install -r requirements.txt
 
 ---
 
-## Star History
+## Star 历史
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date&theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date" />
-  <img alt="HackingTool Star History Chart" src="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date" />
+  <img alt="HackingTool Star 历史图表" src="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date" />
 </picture>
 
 ---
 
-## Support
+## 支持
 
-If this project helps you, consider buying me a coffee:
+如果这个项目对您有帮助，可以请我喝杯咖啡：
 
-<a href="https://buymeacoffee.com/hardikzinzu" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50"></a>
+<a href="https://buymeacoffee.com/hardikzinzu" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="请我喝杯咖啡" height="50"></a>
 
-## Social
+## 社交媒体
 
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/_Zinzu07)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Z4nzu/)
 
-> **For authorized security testing only.**
-> Thanks to all original authors of the tools included in hackingtool.
+> **仅用于授权的安全测试。**
+> 感谢所有包含在 hackingtool 中的工具的原作者。
 
-Your favourite tool is not listed? [Suggest it here](https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md)
+您喜欢的工具没有列出？[在这里推荐](https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md)

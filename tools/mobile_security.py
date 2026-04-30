@@ -3,8 +3,8 @@ from core import HackingToolsCollection
 
 
 class MobSF(HackingTool):
-    TITLE = "MobSF (Mobile Security Framework)"
-    DESCRIPTION = "All-in-one mobile app pentesting, malware analysis, and security assessment."
+    TITLE = "MobSF (移动安全框架)"
+    DESCRIPTION = "一站式移动应用渗透测试、恶意分析和安全评估工具。"
     INSTALL_COMMANDS = [
         "git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git",
         "cd Mobile-Security-Framework-MobSF && ./setup.sh",
@@ -15,8 +15,8 @@ class MobSF(HackingTool):
 
 
 class Frida(HackingTool):
-    TITLE = "Frida (Dynamic Instrumentation)"
-    DESCRIPTION = "Dynamic instrumentation toolkit for runtime hooking on Android, iOS, Windows, macOS, Linux."
+    TITLE = "Frida (动态插桩)"
+    DESCRIPTION = "动态插桩工具包，用于在 Android、iOS、Windows、macOS、Linux 上进行运行时 hook。"
     INSTALL_COMMANDS = ["pip install --user frida-tools"]
     RUN_COMMANDS = ["frida --help"]
     PROJECT_URL = "https://github.com/frida/frida"
@@ -24,8 +24,8 @@ class Frida(HackingTool):
 
 
 class Objection(HackingTool):
-    TITLE = "Objection (Mobile Runtime Exploration)"
-    DESCRIPTION = "Runtime mobile exploration toolkit powered by Frida — no jailbreak/root required."
+    TITLE = "Objection (移动运行时探索)"
+    DESCRIPTION = "基于 Frida 的运行时移动探索工具包 - 无需越狱/root。"
     INSTALL_COMMANDS = ["pip install --user objection"]
     RUN_COMMANDS = ["objection --help"]
     PROJECT_URL = "https://github.com/sensepost/objection"
@@ -33,8 +33,8 @@ class Objection(HackingTool):
 
 
 class MobileSecurityTools(HackingToolsCollection):
-    TITLE = "Mobile Security Tools"
-    DESCRIPTION = "Tools for Android/iOS application security testing and analysis."
+    TITLE = "移动安全工具"
+    DESCRIPTION = "用于 Android/iOS 应用程序安全测试和分析的工具。"
     TOOLS = [
         MobSF(),
         Frida(),

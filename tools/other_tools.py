@@ -18,17 +18,16 @@ from rich.prompt import Prompt
 
 
 class HatCloud(HackingTool):
-    TITLE = "HatCloud(Bypass CloudFlare for IP)"
-    DESCRIPTION = "HatCloud build in Ruby. It makes bypass in CloudFlare for " \
-                  "discover real IP."
+    TITLE = "HatCloud (绕过 CloudFlare 获取 IP)"
+    DESCRIPTION = "HatCloud 使用 Ruby 构建。它可以绕过 CloudFlare 发现真实 IP。"
     INSTALL_COMMANDS = ["git clone https://github.com/HatBashBR/HatCloud.git"]
     PROJECT_URL = "https://github.com/HatBashBR/HatCloud"
 
     def run(self):
         from config import get_tools_dir
         from rich.prompt import Prompt
-        site = Prompt.ask("Enter Site")
-        # Bug 3 fix: os.chdir() replaced with cwd= parameter
+        site = Prompt.ask("输入网站")
+        # Bug 3 修复: os.chdir() 替换为 cwd= 参数
         subprocess.run(
             ["sudo", "ruby", "hatcloud.rb", "-b", site],
             cwd=str(get_tools_dir() / "HatCloud"),
@@ -36,7 +35,7 @@ class HatCloud(HackingTool):
 
 
 class OtherTools(HackingToolsCollection):
-    TITLE = "Other tools"
+    TITLE = "其他工具"
     TOOLS = [
         SocialMediaBruteforceTools(),
         AndroidAttackTools(),
